@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "fadliselaz@gmail.com",
+      "password": "$2a$10$HcJeBeDrFXhS0ms/pzArxOACAvLNOJOYI0/sCvuqP7z7OsXx391Wa",
+      "id": 1
+    },
+    {
+      "email": "evalia@gmail.com",
+      "password": "$2a$10$BEG8y05ghu7wHkAXHn8Khem5FDPBUbHZs5pzSK0..bQfoU5glLvNC",
+      "id": 2
+    }
+  ],
+  "blogs": []
+}
