@@ -3,8 +3,10 @@ import Home from './src/pages/Home';
 import Login from './src/pages/Login';
 import Register from './src/pages/Register';
 import NotFound from './src/pages/404';
+import AddBlog from './src/pages/AddBlog';
 
 const page = window.location.pathname;
+const userData = localStorage.getItem('userData');
 
 switch(page){
   case "/":
@@ -12,11 +14,15 @@ switch(page){
     break
 
   case "/login":
-    Login()
+    userData ? window.location.href="/" : Login()
     break
 
   case "/register":
-    Register()
+    userData ? window.location.href="/" : Register()
+    break
+
+  case "/addBlog":
+    userData ? AddBlog() : window.location.href = "/login"
     break
 
   default:

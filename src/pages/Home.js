@@ -1,3 +1,4 @@
+import axios from "axios";
 import Navbar from "../components/Navbar";
 const app = document.getElementById('app');
 
@@ -6,11 +7,18 @@ export default function Home(){
     // ubah document title
     document.title = "Home Page";
 
-    app.innerHTML = `
-        ${ Navbar() }
-        <div class="w-screen min-h-screen max-w-[1440px] mx-auto p-4">
-            <h1 class="text-orange-500">Home Page</h1>
-        </div>
-    `
-
+    axios.get('http://localhost:3000/blogs')
+    .then(res => {
+        app.innerHTML += Navbar()
+        res.data.forEach((e)=>{
+            app.innerHTML += `
+                <div class="flex flex-col gap-4 max-w-[900px] bg-white shadow-md p-6 my-4 mx-auto">
+                    <h1>${e.judul}</h1>
+                    <small>${e.author}</small>
+                    <img src="${e.img}" alt="${e.judul}" class="w-full h-[280px] object-cover"/>
+                    <p>${e.content}</p>
+                </div>
+            `
+        })
+    })
 }

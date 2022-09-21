@@ -18,7 +18,7 @@ window.handleRegister = (event)=>{
         return alert("Password harus sama");
     }
 
-    axios.post('http://localhost:3000/users', {
+    axios.post('http://localhost:3000/register', {
         email : email,
         password : password
     })
