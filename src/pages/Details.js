@@ -1,6 +1,5 @@
 import axios from "axios";
 import Navbar from "../components/Navbar";
-
 const app = document.getElementById("app");
 
 export default function Details(){
@@ -13,19 +12,14 @@ export default function Details(){
         app.innerHTML += `
         ${Navbar()}
         <div class="w-screen min-h-screen max-w-[1440px] mx-auto p-4">
-    
             <h1> ${res.data.judul} </h1>
             <small> ${res.data.author} - ${res.data.createdAt} </small>
-
             <img src="${res.data.img}" alt="${res.data.judul}" />
-
             <p>${res.data.content}</p>
-
         </div>
         `
     })
     .catch((err)=>{
         console.error(err)
     })
-
 }

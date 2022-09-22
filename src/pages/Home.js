@@ -14,15 +14,14 @@ export default function Home(){
         app.innerHTML += Navbar();
         res.data.forEach((e)=>{
             app.innerHTML += `
-                <div class="bg-white p-6 flex flex-col rounded-md my-6 max-w-[700px] shadow-md">
+                <a href="/details?id=${e.id}" class="bg-white p-6 flex flex-col rounded-md my-6 max-w-[700px] shadow-md">
                     <h1 class="text-2xl"> ${e.judul} </h1>
                     <small> ${e.author} - ${e.createdAt} </small>
                     <img src="${e.img}" alt="${e.judul}" class="h-[280px] object-cover my-4 rounded-lg" />
                     <p> ${e.content} </p>
-                </div>
+                </a>
             `
         })
-
     })
     .catch((err)=>{
         console.error(err);
