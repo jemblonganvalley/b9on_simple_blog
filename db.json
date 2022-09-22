@@ -66,6 +66,24 @@
       "content": "Ad aspernatur dolore",
       "createdAt": "9/21/2022",
       "id": 5
+    },
+    {
+      "userId": 4,
+      "author": "alif@gmail.com",
+      "judul": "Membaca Novel",
+      "img": "https://images.pexels.com/photos/13252401/pexels-photo-13252401.jpeg?auto=compress&cs=tinysrgb&w=500&lazy=load",
+      "content": "Kali ini saya akan membacakan novel",
+      "createdAt": "9/22/2022",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "author": "alif@gmail.com",
+      "judul": "Inventore numquam qu",
+      "img": "https://images.pexels.com/photos/9832430/pexels-photo-9832430.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load",
+      "content": "Et enim voluptatem ",
+      "createdAt": "9/22/2022",
+      "id": 7
     }
   ]
 }
