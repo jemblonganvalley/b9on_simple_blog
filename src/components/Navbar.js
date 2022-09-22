@@ -7,6 +7,15 @@ window.handleLogout = ()=>{
     window.location.href = '/login'
 }
 
+window.showMenu = ()=>{
+    console.info("clicked")
+    let m_menu = document.getElementById("m_menu")
+    if(m_menu.style.display == "none"){
+        m_menu.style.display = "flex"
+        return
+    }
+    m_menu.style.display = "none"
+}
 
 export default function Navbar(){
 
@@ -21,9 +30,20 @@ export default function Navbar(){
             <h1 class="text-white text-4xl font-light select-none cursor-pointer">
                 Jvalley Blogs
             </h1> 
+
+            <button class="material-symbols-outlined text-white ml-auto md:hidden" id="menu_icon" onclick="showMenu()">
+                menu
+            </button>
+
+            <div class="hidden bg-white flex-col w-[180px] absolute top-20 right-2 shadow-xl" id="m_menu">
+                <a href="/" class="flex items-center px-3 h-10">Home</a>
+                <a href="/" class="flex items-center px-3 h-10">Home</a>
+                <a href="/" class="flex items-center px-3 h-10">Home</a>
+                <a href="/" class="flex items-center px-3 h-10">Home</a>
+            </div>
             
            ${ userData ? `
-            <menu class="flex gap-4 text-white font-light ml-auto items-center">
+            <menu class="hidden gap-4 text-white font-light ml-auto items-center md:flex" id="menu">
                 <a href="/" >Home</a>
                 <a href="/addBlog" >Add Blog</a>
                 <a onclick="handleLogout()" class="cursor-pointer">Logout</a>
@@ -31,7 +51,7 @@ export default function Navbar(){
                     ${ JSON.parse(userData).user.email }
                 </span>
             </menu>` : `
-            <menu class="flex gap-4 text-white font-light ml-auto">
+            <menu class="hidden gap-4 text-white font-light ml-auto md:flex" id="menu">
                 <a href="/" >Home</a>
                 <a href="/register" >Register</a>
                 <a href="/login" >Login</a>
