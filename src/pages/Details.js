@@ -12,9 +12,9 @@ export default function Details(){
         app.innerHTML += `
         ${Navbar()}
         <div class="w-screen min-h-screen max-w-[1440px] mx-auto p-4">
-            <h1> ${res.data.judul} </h1>
+            <h1 class="text-4xl"> ${res.data.judul} </h1>
             <small> ${res.data.author} - ${res.data.createdAt} </small>
-            <img src="${res.data.img}" alt="${res.data.judul}" />
+            <img src="${res.data.img}" alt="${res.data.judul}" class="h-[500px] w-full object-cover my-6 rounded-lg" />
             <p>${res.data.content}</p>
         </div>
         `
